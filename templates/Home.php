@@ -12,7 +12,7 @@ if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Makeup Class Recommendation System</title>
+    <title>Makeup Cource Recommendation System</title>
     <link rel="stylesheet" href="css/All.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/component.css">
@@ -92,7 +92,7 @@ if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
         <div class="hero__wrapper">
         <div class="hero__left">
             <div class="hero__left__wrapper">
-                <h1 class="hero__heading">Our purpose is to provide recommendations for makeup classes in close proximity to your location</h1>
+                <h1 class="hero__heading">Our purpose is to recommend makeup cources as the user prefer to watch</h1>
                 <p class="hero__info">Our intention is to optimize your time allocation, allowing you to allocate valuable moments towards.
                     </p>
                 <div class="button__wrapper">
@@ -206,9 +206,7 @@ if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
         <div class="ourSpecials__right">
       <h2 class="ourSpecials__title">Our Speciality </h2>
         <p class="ourSpecials__text">
-        All these services are provided to you with all care so that you can get the 
-    proper services at your suitable time.Mainly we focus for your comfort and care.
-    We just want best for you.       
+        All these makeup and hair videos are provided to you for learning and creating same looks without getting any trouble while searching those kind of makeup vidos.     
    </p>
    <a href="./Services.php" class="btn primary_btn"> Book</a>
 
@@ -233,7 +231,7 @@ if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
             <div class="serviceGrid__item__info">
                 <h3 class="serviceGrid__item__title">Creative Makeup
                 </h3>
-                <h3 class="serviceGrid__item__price">Rs.6000</h3>
+                
                     
                 </div>
             </div>
@@ -244,7 +242,7 @@ if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
                 <div class="serviceGrid__item__info">
                     <h3 class="serviceGrid__item__title">Austhetic makeup looks
                     </h3>
-                    <h2 class="serviceGrid__item__price">Rs.4000</h2>
+                    
                         
                     </div>
                 </div>
@@ -284,26 +282,13 @@ if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
                 <div class="eventsInfo__item__info">
                     <h2 class="eventsInfo__item__title">Party Hairstyles</h2>
                     <p class="eventsInfo__item__text">
-                    Makeup class Management will help you to do your hair work more easier and look beautiful for your any special day.
-                    You dont have to waste your time in making your hairs during special occasions you can directly
-                    contact us. 
+                    Makeup cource recomendation system will help you to do your hair and makeup do more easier and look beautiful for your any special day.
+                    You dont have to waste your time in searching different videos foryour hairs on youtube or instagram you can directly go to our website and search for any hairstyles by your look.
                     </p>
                 </div> 
             </div>
-            <div class="eventsInfo__item" onclick="window.location.href='bookings.php?service=Mehendi Design'">
-                <div class="eventsInfo__item__img">
-                    <img src="../Images/mehendi.png" alternative="1">
-                </div>
-                <div class="eventsInfo__item__info">
-                    <h2 class="eventsInfo__item__title" >Mehendi design </h2>
-                    <p class="eventsInfo__item__text">
-                        The traditional mehendi design revolves around flowers, jaal, peacock and
-                         mango motifs.To make the mehendi ceremony more fun and stressless we have the management for
-                         mehendi rituals. 
-                    
-                    </p>
-                </div> 
-            </div>
+        
+            
             <div class="eventsInfo__item" onclick="window.location.href='bookings.php?service=Lashes Extension'">
                 <div class="eventsInfo__item__img">
                     <img src="../Images/5.png" alternative="1">
@@ -437,7 +422,7 @@ if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
                         <a href="Home.php">Home</a>
                     </li>
                     <li>
-                        <a href="Services.php">Services</a>
+                        <a href="RecommendClass.php">Recommend</a>
                     </li>
                     <li>
                         <a href="About.php">About US</a>

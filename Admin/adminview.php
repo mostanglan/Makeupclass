@@ -52,8 +52,8 @@ require('../templates/connection.php');
 <body>
 
 <div class="topnav">
-  <a href="adminview.php">New Service</a>
-  <a href="serviceform.php">Add Service</a>
+  <a href="adminpanel.php">Dashboard</a>
+  <a href="serviceform.php">Add video</a>
   <a href="adminlogout.php" class="split">Log Out</a>
 </div>
 

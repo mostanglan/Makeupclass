@@ -52,8 +52,8 @@ require('../templates/connection.php');
 <body>
 
 <div class="topnav">
-  <a href="adminview.php">New Service</a>
-  <a href="serviceform.php">Add Service</a>
+  <a href="adminpanel.php">Dashboard</a>
+  <a href="serviceform.php">Add video</a>
   <a href="adminlogout.php" class="split">Log Out</a>
 </div>
 
@@ -100,7 +100,7 @@ tr:nth-child(even) {
       </tr>
 
       <?php
-      	$query = "SELECT * FROM userprofile";
+      	$query = "SELECT * FROM user";
 		$retval = mysqli_query($conn, $query);
 		while($data = mysqli_fetch_assoc($retval)){
 			echo "<tr>";
@@ -109,8 +109,6 @@ tr:nth-child(even) {
 			echo "<td>".$data['username']."</td>";
 			echo "<td><a href='adminview.php?userid=".$data['userid']."'>View</a></td>";
 			echo "<td><a href=''>Delete</a></td>";
-
-
 		}
     	
       	?>
