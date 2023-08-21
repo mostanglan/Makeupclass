@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Project-Client Management System</title>
+    <title>Project-Makeup Video Recommend</title>
     <link rel="stylesheet" href="css/All.css">
     <link rel="stylesheet" href="css/style.css">
     

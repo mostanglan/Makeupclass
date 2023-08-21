@@ -40,7 +40,7 @@ if(!(isset($_SESSION['auth'])) && !($_SESSION['auth']=='auth')){
         <p>This is our user page </p>
         <a href="home.php" class="btn primary_btn">Home</a>
         <a href="RecommendClass.php" class="btn primary_btn">Recommend Me</a>
-        <a href="history.php" class="btn primary_btn">History</a>
+        <a href="history.php" class="btn primary_btn">Saved</a>
         <a href="changepassword.php" class="btn primary_btn">Change Password</a>
         <a href="logout.php" class="btn primary_btn">Logout</a>
 
@@ -51,7 +51,7 @@ if(!(isset($_SESSION['auth'])) && !($_SESSION['auth']=='auth')){
   <h2>Recommend Me</h2>
   <form class="form-horizontal" action="RecommendPage.php" method="post">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Select Class:</label>
+      <label class="control-label col-sm-2" for="email">Category:</label>
       <div class="col-sm-10">
         <select class="form-control" id="course" name="course">
           <option value="1">simple makeup</option>
@@ -62,21 +62,27 @@ if(!(isset($_SESSION['auth'])) && !($_SESSION['auth']=='auth')){
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="pwd">Address:</label>
+      <label class="control-label col-sm-2" for="skintype">Skin type:</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" id="address" placeholder="Enter Address" name="address">
+        <input type="text" class="form-control" id="skin type" placeholder="skintype" name="type">
       </div>
     </div>
-    <div class="form-group">        
-      <div class="col-sm-offset-2 col-sm-10">
-        <div class="checkbox">
-          <button type="button" class="btn btn-primary" onclick="getLocation()">Get Location</button>
-          <span id="longitude"></span>
-          <span id="latitude"></span>
-          <input type="hidden" id="hiddenLongitude" name="hiddenLongitude">
-          <input type="hidden" id="hiddenLatitude" name="hiddenLatitude">
-
-        </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="brand">Brand name:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="brand" placeholder="Brand name" name="type">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="style">Style:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="style" placeholder="style" name="type">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="description">Description:</label>
+      <div class="col-sm-10">          
+        <input type="text" class="form-control" id="description" placeholder="description" name="type">
       </div>
     </div>
     <div class="form-group">        
@@ -87,33 +93,7 @@ if(!(isset($_SESSION['auth'])) && !($_SESSION['auth']=='auth')){
   </form>
 </div>
 
+
 </body>
-<script type="text/javascript">
-        // Function to get the user's location
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                console.log("Geolocation is not supported by this browser.");
-            }
-        }
 
-        // Function to display the latitude and longitude in the specified elements
-        function showPosition(position) {
-            var latitude = position.coords.latitude;
-            var longitude = position.coords.longitude;
-
-            // Display latitude and longitude in span tags
-            document.getElementById("longitude").textContent = "Longitude: "+longitude;
-            document.getElementById("latitude").textContent = "Latitude:" + latitude;
-
-            // Store latitude and longitude in hidden input fields
-            document.getElementById("hiddenLongitude").value = longitude;
-            document.getElementById("hiddenLatitude").value = latitude;
-        }
-
-        // Call the getLocation function when the button is clicked
-        document.getElementById("getLocationBtn").addEventListener("click", getLocation);
-
-</script>
 </html>

@@ -12,7 +12,7 @@ if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project-Makeup Class Management System</title>
+    <title>Project-Makeup Video Rmendation System</title>
     <link rel="stylesheet" href="css/All.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/component.css">
@@ -167,7 +167,7 @@ Our recommendation system leverages a vast database of reputable makeup schools,
         <div class="footer__wrapper">
             <div class="footer__col1">
                 <div class="footer__logo">
-                <img src="../Images/logs.png" alt="Makeup class Management">
+                <img src="../Images/logs.png" alt="Makeup video recommend">
                 </div>
                 <p class="footer__desc">
                     Life is just so beautiful like you, just need some time to freshen up.

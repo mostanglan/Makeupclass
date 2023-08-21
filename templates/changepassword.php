@@ -45,7 +45,7 @@ if(isset($_POST['submit'])){
          
         <a href="home.php" class="btn primary_btn">Home</a>
         <a href="Services.php" class="btn primary_btn">Recommend Me</a>
-        <a href="history.php" class="btn primary_btn">History</a>
+        <a href="history.php" class="btn primary_btn">Saved</a>
         <a href="changepassword.php" class="btn primary_btn">Change Password</a>
         <a href="logout.php" class="btn primary_btn">Logout</a>
 </div>

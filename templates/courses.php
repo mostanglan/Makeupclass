@@ -15,7 +15,7 @@ if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project-Makeup CLass Management System</title>
+    <title>Project-Makeup Video Recomendation System</title>
     <link rel="stylesheet" href="css/All.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/component.css">
@@ -29,7 +29,7 @@ if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
     <div class="container">
         <div class="nav__wrapper">
             <a href="./home.php" class="logo">
-                <img src="../Images/logs.png" alt="Makeup Class">
+                <img src="../Images/logs.png" alt="Makeup Cource">
                  </a>
                  <nav>
                     <div class="nav__icon">
@@ -94,7 +94,7 @@ if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
 <!--Page title-->
 <section id="page__title">
     <div class="container">
-        <h2 class="page__title__text">Explore Our Services</h2>
+        <h2 class="page__title__text">Explore Our Cources</h2>
     </div>
 </section>
 <!--end-->
@@ -349,7 +349,7 @@ if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
                         <a href="Home.php">Home</a>
                     </li>
                     <li>
-                        <a href="Services.php">Servicces</a>
+                        <a href="RecommendClass.php">Recommend</a>
                     </li>
                     <li>
                         <a href="About.php">About Us</a>
