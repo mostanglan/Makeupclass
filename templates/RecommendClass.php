@@ -95,5 +95,4 @@ if(!(isset($_SESSION['auth'])) && !($_SESSION['auth']=='auth')){
 
 
 </body>
-
 </html>

@@ -8,23 +8,25 @@ if(!(isset($_SESSION['auth'])) && !($_SESSION['auth']=='auth'))
 require('connection.php');
 $userid = $_SESSION['userid'];
 
-if(isset($_POST['submit'])){
-    $pwd = $_POST['pwd'];
-    $npwd = $_POST['npwd'];
-    $cpwd = $_POST['rpwd'];
-    $query = "SELECT * FROM userprofile WHERE userid = '$userid'";
-    $retval = mysqli_query($conn, $query);
-    $data = mysqli_fetch_assoc($retval);
-    if($data['pwd']==$pwd){
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+    if(isset($_POST['submit'])){
+        $pwd = $_POST['pwd'];
+        $npwd = $_POST['npwd'];
+        $cpwd = $_POST['rpwd'];
         if($npwd==$cpwd){
-            $upquery = "UPDATE userprofile set pwd='$npwd' WHERE userid='$userid'";
-            mysqli_query($conn, $upquery);
-            header("location: logout.php");
+            $query = "SELECT * FROM user WHERE userid = '$userid'";
+            $retval = mysqli_query($conn, $query);
+            $data = mysqli_fetch_assoc($retval);
+            if($data['password']==$pwd){
+                                $upquery = "UPDATE user set password='$npwd' WHERE userid='$userid'";
+                mysqli_query($conn, $upquery);
+                header("location: logout.php");
+            }else{
+                echo "<script>alter('password incorrect')</script>";
+            }
         }else{
-            echo "<script>alter('comfirm password doesnot match')</script>";
-        }
-    }else{
-        echo "<script>alter('password incorrect')</script>";
+        echo "<script>alter('comfirm password doesnot match')</script>";
+    }
     }
 }
 ?>

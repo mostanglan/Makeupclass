@@ -7,26 +7,25 @@ if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
 require('connection.php');
 
 
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+    if(isset($_POST['submit'])){
+        $email = $_POST['email'];
+        $pwd = $_POST['pwd'];
 
-if(isset($_POST['submit'])){
-    $email = $_POST['email'];
-    $pwd = $_POST['pwd'];
+        $query = "select * from user where email='$email' AND password = '$pwd'";
+        $retval = mysqli_query($conn, $query);
+        $result = mysqli_fetch_assoc($retval);
 
-    $query = "select * from UserProfile where email='$email' AND pwd = '$pwd'";
-    $retval = mysqli_query($conn, $query);
-    $result = mysqli_fetch_assoc($retval);
-    print_r($result);
-
-    if($email == $result['email'] && $pwd == $result['pwd']){
-        $_SESSION['auth'] = 'auth';
-        $_SESSION['userid'] = $result['userid'];
-        $_SESSION['username'] = $result['username'];
-        $_SESSION['email'] = $result['email'];
-        $_SESSION['pwd'] = $result['pwd'];
-        header('location: userpage.php');
-    }
-    else{
-        echo "<script>alert('login Fail')</script>";
+        if($email == $result['email'] && $pwd == $result['password']){
+            $_SESSION['auth'] = 'auth';
+            $_SESSION['userid'] = $result['userid'];
+            $_SESSION['username'] = $result['username'];
+            $_SESSION['email'] = $result['email'];
+            header('location: userpage.php');
+        }
+        else{
+            echo "<script>alert('login Fail')</script>";
+        }
     }
 }
 ?>

@@ -1,12 +1,32 @@
 <?php
 session_start();
 
-if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth')
-{
+if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
     header('location: userpage.php');
 }
-
 require('connection.php');
+
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+    if(isset($_POST['submit'])){
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $pwd = $_POST['pwd'];
+        $cpwd = $_POST['cpwd'];
+        $validation = true;
+        if($cpwd != $pwd) {
+            $validation = false;
+        }
+        if($validation){
+            $query = "INSERt INTO user (username, email, password) VALUES ('$username', '$email', '$pwd')";
+            if(mysqli_query($conn, $query)){
+                header('location: Login.php');
+            }
+            else{
+                echo "<script>alert('registration Fail')</script>";
+            }
+        } 
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +43,7 @@ require('connection.php');
     <div class="form-container">
         
 
-        <form action="login_register.php" method="POST">
+        <form action="register.php" method="POST">
         <h3>Register</h3>
         <input type="text" name="username" required placeholder= "Enter Your Name">
         

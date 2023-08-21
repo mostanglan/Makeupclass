@@ -7,24 +7,24 @@ if(isset($_SESSION['adminauth']) && $_SESSION['adminauth']=='auth'){
 require('../templates/connection.php');
 
 
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+    if(isset($_POST['submit'])){
+        $email = $_POST['email'];
+        $pwd = $_POST['pwd'];
 
-if(isset($_POST['submit'])){
-    $email = $_POST['email'];
-    $pwd = $_POST['pwd'];
+        $query = "select * from admin where email='$email' AND password = '$pwd'";
+        $retval = mysqli_query($conn, $query);
 
-    $query = "select * from adminprofile where email='$email' AND pwd = '$pwd'";
-    $retval = mysqli_query($conn, $query);
-    $result = mysqli_fetch_assoc($retval);
-
-    if($email == $result['email'] && $pwd == $result['pwd']){
-        $_SESSION['adminauth'] = 'auth';
-        $_SESSION['adminid'] = $result['adminid'];
-        $_SESSION['adminemail'] = $result['email'];
-        $_SESSION['adminpwd'] = $result['pwd'];
-        header('location: adminpanel.php');
-    }
-    else{
-        echo "<script>alert('login Fail')</script>";
+        if(mysqli_num_rows($retval) == 1){
+            $result = mysqli_fetch_assoc($retval);
+            $_SESSION['adminauth'] = 'auth';
+            $_SESSION['adminid'] = $result['adminid'];
+            $_SESSION['adminemail'] = $result['email'];
+            header('location: adminpanel.php');
+        }
+        else{
+            echo "<script>alert('login Fail')</script>";
+        }
     }
 }
 

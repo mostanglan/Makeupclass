@@ -100,7 +100,7 @@ tr:nth-child(even) {
       </tr>
 
       <?php
-      	$query = "SELECT * FROM userprofile";
+      	$query = "SELECT * FROM user";
 		$retval = mysqli_query($conn, $query);
 		while($data = mysqli_fetch_assoc($retval)){
 			echo "<tr>";
@@ -109,8 +109,6 @@ tr:nth-child(even) {
 			echo "<td>".$data['username']."</td>";
 			echo "<td><a href='adminview.php?userid=".$data['userid']."'>View</a></td>";
 			echo "<td><a href=''>Delete</a></td>";
-
-
 		}
     	
       	?>
