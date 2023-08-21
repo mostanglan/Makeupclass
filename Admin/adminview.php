@@ -104,7 +104,7 @@ tr:nth-child(even) {
         <th>Edit</th>
       </tr>
       <?php
-        $query = "SELECT * FROM booking INNER JOIN ON service booking.sid=service.sid INNER JOIN ON userprofile booking.userid=service.uid"
+        $query = "SELECT * FROM booking INNER JOIN ON service booking.sid=service.sid INNER JOIN ON userprofile booking.userid=service.uid";
         $result = mysqli_query($conn, $query);
         while($data = mysqli_fetch_assoc($result)){
           echo "<tr>";
@@ -125,7 +125,3 @@ tr:nth-child(even) {
 
 </body>
 </html>
-
-
-
-

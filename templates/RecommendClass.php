@@ -89,7 +89,6 @@ if(!(isset($_SESSION['auth'])) && !($_SESSION['auth']=='auth')){
 
 </body>
 <script type="text/javascript">
-        // Function to get the user's location
         function getLocation() {
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
@@ -98,22 +97,17 @@ if(!(isset($_SESSION['auth'])) && !($_SESSION['auth']=='auth')){
             }
         }
 
-        // Function to display the latitude and longitude in the specified elements
         function showPosition(position) {
             var latitude = position.coords.latitude;
             var longitude = position.coords.longitude;
 
-            // Display latitude and longitude in span tags
+
             document.getElementById("longitude").textContent = "Longitude: "+longitude;
             document.getElementById("latitude").textContent = "Latitude:" + latitude;
 
-            // Store latitude and longitude in hidden input fields
             document.getElementById("hiddenLongitude").value = longitude;
             document.getElementById("hiddenLatitude").value = latitude;
         }
-
-        // Call the getLocation function when the button is clicked
-        document.getElementById("getLocationBtn").addEventListener("click", getLocation);
 
 </script>
 </html>
