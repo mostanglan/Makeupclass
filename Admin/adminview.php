@@ -16,12 +16,6 @@ require('../templates/connection.php');
     <link rel="stylesheet" href="css/component.css">
     <link rel="stylesheet" href="css/style.css">
 	<title>Admin</title>
-</head>
-<body>
-	<center>
-	<h1>Admin View</h1>
-    </center>
-
     <style>
 .topnav {
   overflow: hidden;
@@ -47,7 +41,6 @@ require('../templates/connection.php');
   background-color: #26643b;
   color: white;
 }
-
 .row {
   margin-left:-5px;
   margin-right:-5px;

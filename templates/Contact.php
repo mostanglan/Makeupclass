@@ -65,7 +65,6 @@ if(isset($_SESSION['auth']) && $_SESSION['auth']=='auth'){
 </div>
 <div class="nav__list__wrapper">
     <li><a href="Home.php" class="nav__link">Home</a></li>
-    <li> <a href="course.php" class="nav__link">Course</a></li>
     <li> <a href="About.php" class="nav__link">About Us</a></li>
     <li><a href="Contact.php" class="nav__link">Contact</a></li>
     <?php
