@@ -16,37 +16,58 @@ require('../templates/connection.php');
     <link rel="stylesheet" href="css/component.css">
     <link rel="stylesheet" href="css/style.css">
 	<title>Admin</title>
-</head>
-<body>
-	<center>
-	<h1>Welcome to Admin Panel</h1>
-    </center>
+  <style>
+    .topnav {
+      overflow: hidden;
+      background-color:#a2de96;
+    }
 
-    <style>
-.topnav {
-  overflow: hidden;
-  background-color:#a2de96;
-}
+    .topnav a {
+      float: left;
+      color:black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
 
-.topnav a {
-  float: left;
-  color:black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
+    .topnav a:hover {
+      background-color:#26643b;
+      color: black;
+    }
 
-.topnav a:hover {
-  background-color:#26643b;
-  color: black;
-}
+    .topnav a.split {
+      float: right;
+      background-color: #26643b;
+      color: white;
+    }
 
-.topnav a.split {
-  float: right;
-  background-color: #26643b;
-  color: white;
-}
+    .row {
+      margin-left:-5px;
+      margin-right:-5px;
+    }
+      
+    .column {
+      float: left;
+      width: 50%;
+      padding: 5px;
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 16px;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
 </style>
 </head>
 <body>
@@ -56,37 +77,6 @@ require('../templates/connection.php');
   <a href="serviceform.php">Add video</a>
   <a href="adminlogout.php" class="split">Log Out</a>
 </div>
-
-
-
-<style>
-.row {
-  margin-left:-5px;
-  margin-right:-5px;
-}
-  
-.column {
-  float: left;
-  width: 50%;
-  padding: 5px;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  border: 1px solid #ddd;
-}
-
-th, td {
-  text-align: left;
-  padding: 16px;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-</style>
 
 <div class="row">
   <div class="column">

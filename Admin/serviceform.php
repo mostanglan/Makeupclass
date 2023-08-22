@@ -33,13 +33,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="sform.css">
 	<title>Admin</title>
-</head>
-<body>
-	<center>
-	<h1>Update</h1>
-    </center>
-
-    <style>
+  <style>
 .topnav {
   overflow: hidden;
   background-color:#a2de96;
@@ -66,6 +60,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 }
 </style>
 </head>
+<body>
 <body>
 
 <div class="topnav">

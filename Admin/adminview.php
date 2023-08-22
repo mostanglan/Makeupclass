@@ -47,19 +47,7 @@ require('../templates/connection.php');
   background-color: #26643b;
   color: white;
 }
-</style>
-</head>
-<body>
 
-<div class="topnav">
-  <a href="adminpanel.php">Dashboard</a>
-  <a href="serviceform.php">Add video</a>
-  <a href="adminlogout.php" class="split">Log Out</a>
-</div>
-
-
-
-<style>
 .row {
   margin-left:-5px;
   margin-right:-5px;
@@ -87,6 +75,14 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 </style>
+</head>
+<body>
+
+<div class="topnav">
+  <a href="adminpanel.php">Dashboard</a>
+  <a href="serviceform.php">Add video</a>
+  <a href="adminlogout.php" class="split">Log Out</a>
+</div>
 
 <div class="row">
   <div class="column">
