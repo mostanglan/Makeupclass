@@ -53,7 +53,8 @@ require('../templates/connection.php');
 
 <div class="topnav">
   <a href="adminpanel.php">Dashboard</a>
-  <a href="serviceform.php">Add video</a>
+  <a href="serviceform.php">Add video</a> 
+  <a href="adminbox.php">Show video</a>
   <a href="adminlogout.php" class="split">Log Out</a>
 </div>
 
